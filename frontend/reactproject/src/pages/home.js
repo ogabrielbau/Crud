@@ -9,7 +9,7 @@ function Home() {
       <div className="crud-buttons">
         <Link to="/insere" className="btn criar">Criar</Link>
         <Link to="/listar" className="btn ler">Ler</Link>
-        <Link to="/atualizar" className="btn atualizar">Atualizar</Link>
+        <Link to="/editar" className="btn atualizar">Atualizar</Link>
         <Link to="/deletar" className="btn deletar">Deletar</Link>
       </div>
     </div>

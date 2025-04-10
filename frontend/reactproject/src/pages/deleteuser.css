@@ -9,12 +9,6 @@
   --input-bg: #3a3a3a;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: 'Outfit', sans-serif;
   background-color: var(--bg);
@@ -44,37 +38,30 @@ h2 {
   font-weight: 700;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
-label {
-  font-weight: 500;
-}
-
-input {
-  padding: 1rem;
-  border: none;
-  border-radius: 10px;
-  background-color: var(--input-bg);
-  color: var(--text);
-  font-size: 1rem;
-}
-
-input::placeholder {
-  color: #bcbcbc;
-}
+.buscar {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .buscar input {
+    padding: 1rem;
+    width: 60%;
+    min-width: 200px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--input-bg);
+    color: var(--text);
+  }
 
 button {
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   border: none;
   border-radius: 10px;
   background-color: var(--accent);
   color: var(--text);
-  font-size: 1.1rem;
-  font-weight: 500;
   cursor: pointer;
   transition: background 0.3s, transform 0.2s;
 }
@@ -84,8 +71,39 @@ button:hover {
   transform: scale(1.03);
 }
 
+.form-edicao {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input {
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--input-bg);
+  color: var(--text);
+}
+
 .mensagem {
   text-align: center;
   font-size: 0.95rem;
   color: #ccc;
+}
+
+.confirmacao {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.confirmar {
+  background-color: #6c1c1c;
+}
+
+.confirmar:hover {
+  background-color: #a82323;    
 }

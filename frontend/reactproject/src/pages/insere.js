@@ -17,8 +17,27 @@ function App() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const isValidEmail = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!formData.nome || !formData.sobrenome || !formData.datanasc || !formData.cpf || !formData.email) {
+      setMensagem('Por favor, preencha todos os campos.');
+      return;
+    }
+
+    if (!/^\d{11}$/.test(formData.cpf)) {
+      setMensagem('CPF deve conter exatamente 11 dígitos numéricos.');
+      return;
+    }
+
+    if (!isValidEmail(formData.email)) {
+      setMensagem('Digite um e-mail válido.');
+      return;
+    }
 
     try {
       const response = await fetch('http://localhost:1111/users', {
@@ -46,7 +65,7 @@ function App() {
   };
 
   return (
-    <div className="container">
+    <div className="insert-container">
       <form onSubmit={handleSubmit}>
         <h2>Cadastro de Usuário</h2>
 
@@ -84,6 +103,7 @@ function App() {
           value={formData.cpf}
           onChange={handleChange}
           required
+          placeholder="Somente números"
         />
 
         <label>Email</label>
@@ -96,7 +116,7 @@ function App() {
         />
 
         <button type="submit">Cadastrar</button>
-        {mensagem && <p>{mensagem}</p>}
+        {mensagem && <p className="mensagem">{mensagem}</p>}
       </form>
     </div>
   );

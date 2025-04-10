@@ -53,7 +53,8 @@ h2 {
 .tabela-row {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  padding: 1rem;
+  padding: 0 12px;
+  text-align: center;
   background-color: var(--row-bg);
   border-radius: 10px;
   border: 1px solid var(--border);
