@@ -1,0 +1,50 @@
+# 📋 Projeto de Cadastro de Usuários
+
+Este é um projeto simples de **cadastro de usuários** com frontend em React e backend em Node.js.
+
+## 🚀 Funcionalidades
+- Inserção de dados de usuários (nome, sobrenome, data de nascimento, CPF e email).
+- Validação de campos (formato do email, CPF com 11 dígitos, obrigatoriedade).
+- Envio dos dados para um servidor backend via requisição `POST`.
+
+## 🧩 Tecnologias Utilizadas
+- **Frontend:** React.js
+- **Backend:** Node.js (com Express)
+- **CSS:** Estilização customizada com variáveis e validações visuais
+
+## 🛠️ Como executar o projeto
+
+### 1. Instalar o Node.js
+Baixe e instale o Node.js em:  
+👉 [https://nodejs.org/](https://nodejs.org/)
+
+Após a instalação, você pode verificar se tudo está certo com:
+```bash
+node -v
+npm -v
+```
+
+### 2. Clonar o projeto
+```bash
+git clone https://github.com/seu-usuario/seu-projeto.git
+cd seu-projeto
+```
+
+### 3. Iniciar o backend
+
+Navegue até a pasta do backend (onde está o arquivo `app.js`) e execute:
+```bash
+node app.js
+```
+Isso iniciará o servidor backend na porta **1111**.
+
+### 4. Iniciar o frontend
+
+Navegue até a pasta do frontend (onde está o React) e rode:
+```bash
+npm install
+npm start
+```
+O projeto abrirá automaticamente no navegador em `http://localhost:3000`.
+
+## ✅ Pronto! Agora você pode testar o formulário e cadastrar usuários.
